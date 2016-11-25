@@ -1,3 +1,3 @@
 # 个人博客
 
-(zengyuanman.github.io/)[https://zengyuanman.github.io/]
+> 个人博客，戳这里进去 [这里](https://zengyuanman.github.io/)
