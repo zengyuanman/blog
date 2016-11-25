@@ -2,6 +2,7 @@
 layout: post
 title:  "零零碎碎的东西"
 date:   2016-11-25 19:07:45 +0800
+desc: "简介"
 categories: weiber
 ---
 
@@ -10,7 +11,7 @@ categories: weiber
 
 ##javascript
 
-`
+{% highlight javascript %}
 $.ajax({
         url: '/path/to/file',
         type: 'default GET (Other values: POST)',
@@ -32,7 +33,8 @@ $.ajax({
     .always(function() {
         console.log("complete");
     });
-`
+{% endhighlight %}
+
 
 ## chrome 
 在 chrome 地址栏输入 chrome://flags 可以开启一些chrome的实验功能
