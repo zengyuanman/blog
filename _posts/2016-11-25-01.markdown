@@ -4,6 +4,35 @@ title:  "零零碎碎的东西"
 date:   2016-11-25 19:07:45 +0800
 categories: weiber
 ---
-## chrome 
 
+##css
+
+
+##javascript
+
+`
+$.ajax({
+        url: '/path/to/file',
+        type: 'default GET (Other values: POST)',
+        dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+        data: {
+            param1: 'value1'
+        },
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+`
+
+## chrome 
 在 chrome 地址栏输入 chrome://flags 可以开启一些chrome的实验功能
