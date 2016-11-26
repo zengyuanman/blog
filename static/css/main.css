@@ -14,6 +14,12 @@ ul, ol { margin-left: 30px; }
 li > ul, li > ol { margin-bottom: 0; }
 /** Headings */
 h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+h6{ font-size: 18px; }
+h5{ font-size: 20px; }
+h4{ font-size: 22px; }
+h3{ font-size: 24px; }
+h2{ font-size: 26px; }
+h1{ font-size: 28px; }
 /** Blockquotes */
 blockquote { color: #828282; border-left: 4px solid #e8e8e8; padding-left: 15px; font-size: 18px; letter-spacing: -1px; font-style: italic; }
 blockquote >:last-child { margin-bottom: 0; }
