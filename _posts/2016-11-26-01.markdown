@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "一些笔记"
+date:   2016-11-25
+description: "一些笔记"
+categories: weiber
+---
+
+## 日常 meta
+[H5项目常见问题汇总及解决方案](http://www.qdfuns.com/notes/15874/57022420b10fa1abaa2850c17a38e7d7.html)
+
+[HTML meta 标签](http://www.dreamdu.com/xhtml/tag_meta/) 
+
+[Segmentfault - 常用meta整理](http://segmentfault.com/a/1190000002407912) 
+
+[meta 标签整理](https://www.zybuluo.com/Mercedes-Benz/note/128163)
+
