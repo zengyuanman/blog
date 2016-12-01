@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "本地配置https"
+title:  "apache 下本地配置 https,wss"
 date:   2016-11-28
-description: "本地配置https"
+description: "apache 下本地配置 https,wss"
 categories: weiber
 ---
 
@@ -29,7 +29,7 @@ https 怎么安全啊，ssl 怎么加密啊，我也就不讲了，讲也讲不�
 
 这个是httpd-vhosts.conf里面的配置
 
-{% highlight  html %}
+{% highlight  text %}
 
 <VirtualHost *:80>
 
@@ -56,4 +56,50 @@ https 怎么安全啊，ssl 怎么加密啊，我也就不讲了，讲也讲不�
 
 {% endhighlight %}
 
-然后就没有然后了，可以通过https://wx.jinfuzi.net来访问了。开始认真写 node端的绑定的登录咯。
+然后就没有然后了，可以通过https://wx.jinfuzi.net来访问了。
+
+
+## 关于 websocket 的 ws以及 wss 的配置
+
+首先添加引用，最后一个很重要
+
+{% highlight  text %}
+LoadModule proxy_module modules/mod_proxy.so  
+LoadModule proxy_http_module modules/mod_proxy_http.so  
+LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so 
+{% endhighlight %}
+
+配置如下
+
+{% highlight  text %}
+
+<VirtualHost *:80>
+    ServerAdmin zengyuanman123@163.com
+    DocumentRoot "/Users/weiber/htdocs/gitlab/jfz_fortune_wxapp/node"
+    ServerName wx.jinfuzi.net
+
+    ProxyPass /socket.io/1/websocket/ ws://127.0.0.1:3000/socket.io/1/websocket/
+    ProxyPassReverse /socket.io/1/websocket/ ws://127.0.0.1:3000/socket.io/1/websocket/
+
+    ProxyPass / http://127.0.0.1:3000/
+    ProxyPassReverse / http://127.0.0.1:3000/
+</VirtualHost>
+<VirtualHost *:443>
+    ServerAdmin zengyuanman123@163.com
+    DocumentRoot "/Users/weiber/htdocs/gitlab/jfz_fortune_wxapp/node"
+    ServerName wx.jinfuzi.net
+
+    SSLEngine on
+    SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
+    SSLCertificateFile "/Applications/XAMPP/xamppfiles/etc/ssl/server.crt"
+    SSLCertificateKeyFile "/Applications/XAMPP/xamppfiles/etc/ssl/server.key"
+
+    ProxyPass /socket.io/1/websocket/ ws://127.0.0.1:3000/socket.io/1/websocket/
+    ProxyPassReverse /socket.io/1/websocket/ ws://127.0.0.1:3000/socket.io/1/websocket/
+
+    ProxyPass / http://127.0.0.1:3000/
+    ProxyPassReverse / http://127.0.0.1:3000/
+</VirtualHost>
+
+{% endhighlight %}
+
