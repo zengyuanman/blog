@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "零零碎碎的备忘"
+date:   2016-11-25
+description: "前端相关一些零零碎碎的备忘"
+categories: weiber
+---
+
+## javascript
+服务器端通过 setCookie 跨域设置 cookie
+
+{% highlight javascript %}
+$.ajax({
+        url: '/path/to/file',
+        type: 'default GET (Other values: POST)',
+        dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+        data: {
+            param1: 'value1'
+        },
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+{% endhighlight %}
+  
+
+## chrome 
+在 chrome 地址栏输入 chrome://flags 可以开启一些chrome的实验功能
+chrome下小于12px 的字体设置无效的时候，使用 
+{% highlight css %}
+-webkit-text-size-adjust: 100%;
+{% endhighlight %}
