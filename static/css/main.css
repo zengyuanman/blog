@@ -38,7 +38,7 @@ a:hover { color: #f60; text-decoration: none; }
 .container .nav{ height: 32px; border-bottom: 1px solid green; line-height: 32px; font-size: 14px; color:#999; }
 .container .nav .sep{ margin: 0 10px; font-family:'STHeiti'; }
 .container .wrapper{ padding: 30px 0; }
-.container .wrapper .title{ border-bottom: 1px solid #ddd; line-height: 2; font-size: 14px; }
+.container .wrapper .title{  margin-top: 10px; line-height: 2; font-size: 14px; }
 .footer{ padding: 30px 0; border-top: 1px solid #eee;}
 .footer .wrapper{ text-align:center; color:#999; }
 .footer p{ margin:0; }

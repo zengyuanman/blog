@@ -3,7 +3,7 @@ layout: post
 title:  "wap端本地模拟真机调试（MAC 版）"
 date:   2016-11-26
 description: "wap端本地模拟真机调试（MAC 版）"
-categories: weiber
+categories: Blog
 ---
 
 ## 背景
