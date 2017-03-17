@@ -3,7 +3,7 @@ layout: post
 title:  "前端开发规范-javascript-初稿"
 date:   2017-03-17
 description: "前端开发规范-javascript-初稿"
-categories: 
+categories: Rules
 ---
 
 # JavaScript编码规范
