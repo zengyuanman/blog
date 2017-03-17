@@ -1,20 +1,7 @@
 {% include header.html %}
 <div class="wrapper">
-    ## {% for category in site.categories %}
-    ## <h2 class="title">{{ category | first }}</h2>
-    ## <ul class="arc-list">
-    ##     {% for post in category.last %}
-    ##     <li>
-    ##      	<div class="art-item">
-    ##             <a href="{{post.url}}" target="_blank">{{post.title}}</a>
-    ##             &ensp;&ensp;<span class="date">{{ post.date }}</span>
-    ##         </div>
-    ##     </li>
-    ##     {% endfor %}
-    ## </ul>
-    ## {% endfor %}
     <ul class="arc-list">
-        {% for post in size.posts %}
+        {% for post in site.posts %}
         <li>
             <div class="art-item">
                 <a href="{{post.url}}" target="_blank">{{post.title}}</a>
